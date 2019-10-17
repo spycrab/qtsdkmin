@@ -19,7 +19,6 @@ def get_xml(url):
 
 packages={}
 urls={}
-entries=[]
 
 def add_package(package, url):
     global packages, urls
@@ -30,7 +29,7 @@ def add_package(package, url):
     urls[name] = url
     
 def install_package(package_name):
-    global CONFIG, urls, entries
+    global CONFIG, urls
 
     if package_name in CONFIG['ignore']:
         return
@@ -119,7 +118,3 @@ print("Done. {} packages found.".format(len(packages)))
 
 for package in CONFIG['packages']:
     install_package(package)
-
-for e in entries:
-    print("SIZE: {}".format(pathlib.Path(e).stat().st_size))
-    print("CONTENTS: {}".format(len(pathlib.Path(e).read_bytes())))
