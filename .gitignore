@@ -1,0 +1,8 @@
+# Ignore config files
+*.yml
+# Ignore temp. files
+*~
+# Ignore cache
+*.pyc
+__pycache__
+
