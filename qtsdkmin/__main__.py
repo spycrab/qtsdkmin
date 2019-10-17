@@ -101,7 +101,7 @@ def add_repository(url):
         add_package(package, url)
 
 
-        parser = argparse.ArgumentParser(description='Create a minimal Qt install')
+parser = argparse.ArgumentParser(description='Create a minimal Qt install')
 
 parser.add_argument('manifest', type=str)
 parser.add_argument('--verbose', action='store_true')
