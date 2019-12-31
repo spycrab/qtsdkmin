@@ -35,7 +35,7 @@ def install_package(package_name):
         return
         
     if package_name not in packages:
-        print("Package "{}" not found".format(package_name))
+        print("Package '{}' not found".format(package_name))
         exit(1)
 
     package = packages[package_name]
@@ -91,7 +91,7 @@ def add_repository(url):
             continue
 
         if args.verbose:
-            print("Adding "{}"...".format(repo.attrib["displayname"]))
+            print("Adding '{}'...".format(repo.attrib["displayname"]))
 
         add_repository(url)
 
